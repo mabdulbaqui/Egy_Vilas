@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Villas predections in Cairo">
+    <meta name="author" content="Mohamed Crown">
+    <meta name="keywords" content="Villas predections in Cairo">
+
+    <!-- Title Page-->
+    <title>Villas</title>
+
+    <!-- Icons font CSS-->
+    <link href="/static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Vendor CSS-->
+    <link href="/static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="/static/css/main.css" rel="stylesheet" media="all">
+
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins main-bg">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4 form-row">
+                <div class="card-body">
+                    <h1 class="title"><b>Villas Prediction App</b></h1>
+                    <p class="desc">This app predicting Villas Meter Price & Price count on a specific Features.</p>
+                    <br><br>
+                    <form method="POST" action="/predict">
+                        <div class="row row-space">
+
+
+                            <div class="input-group">
+                                <div class="col-2">
+
+                                    <label class="label"><b>Type &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </b></label>
+                                    <div class="rs-select2 js-select-simple">
+                                        <select name="Type">  
+                                    <option value="Stand Alone Villa">Stand Alone Villa</option>
+                                    <option value="Twin House">Twin House</option>
+                                    <option value="Town House">Town House</option>
+                                </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="col-2">
+
+                                    <label class="label"><b>Location &nbsp; &nbsp; &nbsp;</b></label>
+                                    <div class="rs-select2 js-select-simple">
+                                        <select name="location">
+                                    
+                                    <option value="Sheikh Zayed، Giza">Sheikh Zayed، Giza</option>
+                                    <option value="Rehab City، Cairo">Rehab City، Cairo</option>
+                                    <option value="New Cairo - El Tagamoa, Cairo">New Cairo - El Tagamoa, Cairo</option>
+                                    <option value="Shorouk City، Cairo">Shorouk City، Cairo</option>
+                                    <option value="Madinaty، Cairo">Madinaty، Cairo</option>
+                                    <option value="New Cairo - El Tagamoa، Cairo">New Cairo - El Tagamoa، Cairo</option>
+                                    <option value="6th of October، Giza">6th of October، Giza</option>
+                                    <option value="Madinaty, Cairo">Madinaty, Cairo</option>
+                                    <option value="Mokattam, Cairo">Mokattam, Cairo</option>
+                                    <option value="6th of October, Giza">6th of October, Giza</option>
+                                    <option value="Sheikh Zayed, Giza">Sheikh Zayed, Giza</option>
+                                    <option value="Dokki، Giza">Dokki، Giza</option>
+                                    <option value="New Capital City، Cairo">New Capital City، Cairo</option>
+                                    <option value="Mostakbal City، Cairo">Mostakbal City، Cairo</option>
+                                    <option value="North Coast، Matruh">North Coast، Matruh</option>
+                                    <option value="Heliopolis، Cairo">Heliopolis، Cairo</option>
+                                    <option value="Borg al-Arab، Alexandria">Borg al-Arab، Alexandria</option>
+                                    <option value="Mokattam، Cairo">Mokattam، Cairo</option>
+                                    <option value="Zohour District، Port Said">Zohour District، Port Said</option>
+                                    <option value="Rehab City, Cairo">Rehab City, Cairo</option>
+                                    <option value="Hadayek al-Ahram، Giza">Hadayek al-Ahram، Giza</option>
+                                    <option value="Obour City، Cairo">Obour City، Cairo</option>
+                                    <option value="Borg al-Arab, Alexandria">Borg al-Arab, Alexandria</option>
+                                    <option value="Hurghada, Red Sea">Hurghada, Red Sea</option>
+                                    <option value="Maadi، Cairo">Maadi، Cairo</option>
+                                    <option value="Hadayek 6th of October، Giza">Hadayek 6th of October، Giza</option>
+                                    <option value="Ain Sukhna، Suez">Ain Sukhna، Suez</option>
+                                    <option value="Hurghada، Red Sea">Hurghada، Red Sea</option>
+                                    <option value="New Damietta، Damietta">New Damietta، Damietta</option>
+                                    <option value="Ismailia City، Ismailia">Ismailia City، Ismailia</option>
+                                    <option value="Giza District، Giza">Giza District، Giza</option>
+                                    <option value="Haram، Giza">Haram، Giza</option>
+                                    <option value="Agami، Alexandria">Agami، Alexandria</option>
+                                    <option value="10th of Ramadan، Sharqia">10th of Ramadan، Sharqia</option>
+                                    <option value="New Heliopolis، Cairo">New Heliopolis، Cairo</option>
+                                    <option value="Shorouk City, Cairo">Shorouk City, Cairo</option>
+                                    <option value="West Somid، Giza">West Somid، Giza</option>
+                                    <option value="Alamein، Matruh">Alamein، Matruh</option>
+                                    <option value="Sharm al-Sheikh، South Sinai">Sharm al-Sheikh، South Sinai</option>
+                                    <option value="North Coast, Matruh">North Coast, Matruh</option>
+                                    <option value="Nasr City، Cairo">Nasr City، Cairo</option>
+                                    <option value="Badr City، Cairo">Badr City، Cairo</option>
+                                    <option value="New Capital City, Cairo">New Capital City, Cairo</option>
+                                    <option value="Downtown Cairo، Cairo">Downtown Cairo، Cairo</option>
+                                    <option value="Ain Shams، Cairo">Ain Shams، Cairo</option>
+                                    <option value="Mostakbal City, Cairo">Mostakbal City, Cairo</option>
+                                    <option value="New Minya، Minya">New Minya، Minya</option>
+                                    <option value="Marsa Matrouh، Matruh">Marsa Matrouh، Matruh</option>
+                                    <option value="Mansuriyya، Giza">Mansuriyya، Giza</option>
+                                    <option value="Kafr Abdo، Alexandria">Kafr Abdo، Alexandria</option>
+                                    <option value="Tersa، Giza">Tersa، Giza</option>
+                                    <option value="Abu Talat، Alexandria">Abu Talat، Alexandria</option>
+                                    <option value="Ras Sedr، South Sinai">Ras Sedr، South Sinai</option>
+                                    <option value="15 May City، Cairo">15 May City، Cairo</option>
+                                    <option value="Helmeyat El Zaytoun، Cairo">Helmeyat El Zaytoun، Cairo</option>
+                                    <option value="Mansura، Dakahlia">Mansura، Dakahlia</option>
+                                    <option value="Heliopolis, Cairo">Heliopolis, Cairo</option>
+                                    <option value="Maadi, Cairo">Maadi, Cairo</option>
+                                    <option value="Zahraa Al Maadi، Cairo">Zahraa Al Maadi، Cairo</option>
+                                    <option value="Ain Sukhna, Suez">Ain Sukhna, Suez</option>
+                                    <option value="Nasr City, Cairo">Nasr City, Cairo</option>
+                                    <option value="Obour City, Cairo">Obour City, Cairo</option>
+
+
+
+                                </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="row row-space">
+
+
+                            <div class="input-group">
+                                <div class="col-2">
+
+                                    <label class="label"><b>Compound &nbsp; &nbsp; &nbsp;</b></label>
+                                    <div class=" rs-select2 js-select-simple ">
+                                        <select name="Compound">
+                                    <option value="Lake West">Lake West</option>
+                                    <option value="not_in_Compound">not_in_Compound</option>
+                                    <option value="Hyde Park New Cairo">Hyde Park New Cairo</option>
+                                    <option value="Al Rabwa">Al Rabwa</option>
+                                    <option value="Rehab City">Rehab City</option>
+                                    <option value="EL Patio Prime">EL Patio Prime</option>
+                                    <option value="Madinaty">Madinaty</option>
+                                    <option value="Village West">Village West</option>
+                                    <option value="Beverly Hills">Beverly Hills</option>
+                                    <option value="Villette">Villette</option>
+                                    <option value="Swan Lake">Swan Lake</option>
+                                    <option value="Sun Capital">Sun Capital</option>
+                                    <option value="Zizinia Gardens">Zizinia Gardens</option>
+                                    <option value="EL Patio 5">EL Patio 5</option>
+                                    <option value="Layan">Layan</option>
+                                    <option value="Taj City">Taj City</option>
+                                    <option value="Uptown Cairo">Uptown Cairo</option>
+                                    <option value="EL Patio 6">EL Patio 6</option>
+                                    <option value="El Karma 4">El Karma 4</option>
+                                    <option value="El Patio">El Patio</option>
+                                    <option value="Mountain View Chillout Park">Mountain View Chillout Park</option>
+                                    <option value="Royal City">Royal City</option>
+                                    <option value="Mena Garden City">Mena Garden City</option>
+                                    <option value="Al Yasmine">Al Yasmine</option>
+                                    <option value="Royal Meadows">Royal Meadows</option>
+                                    <option value="Sodic Westown">Sodic Westown</option>
+                                    <option value="El Karma 2">El Karma 2</option>
+                                    <option value="Allegria">Allegria</option>
+                                    <option value="Sama">Sama</option>
+                                    <option value="New Giza">New Giza</option>
+                                    <option value="Midtown Sky">Midtown Sky</option>
+                                    <option value="Vinci">Vinci</option>
+                                    <option value="IL Bosco">IL Bosco</option>
+                                    <option value="Blue Vert">Blue Vert</option>
+                                    <option value="Midtown Solo">Midtown Solo</option>
+                                    <option value="Kayan">Kayan</option>
+                                    <option value="Jedar">Jedar</option>
+                                    <option value="Stella Compounds">Stella Compounds</option>
+                                    <option value="Badya Palm Hills">Badya Palm Hills</option>
+                                    <option value="Etapa">Etapa</option>
+                                    <option value="Mountain View iCity">Mountain View iCity</option>
+                                    <option value="Azzar">Azzar</option>
+                                    <option value="O West">O West</option>
+                                    <option value="Etoile de Ville">Etoile de Ville</option>
+                                    <option value="Sarai">Sarai</option>
+                                    <option value="Maxim Country Club">Maxim Country Club</option>
+                                    <option value="Palm Hills Katameya">Palm Hills Katameya</option>
+                                    <option value="Palm Hills Katameya Extension">Palm Hills Katameya Extension</option>
+                                    <option value="Dyar">Dyar</option>
+                                    <option value="Moon Hillls">Moon Hillls</option>
+                                    <option value="La Vida">La Vida</option>
+                                    <option value="The Square">The Square</option>
+                                    <option value="Grand Residence">Grand Residence</option>
+                                    <option value="Katameya Breeze">Katameya Breeze</option>
+                                    <option value="Al Diyar">Al Diyar</option>
+                                    <option value="Joulz">Joulz</option>
+                                    <option value="Palm hills golf extension">Palm hills golf extension</option>
+                                    <option value="Cairo Festival City">Cairo Festival City</option>
+                                    <option value="Villino">Villino</option>
+                                    <option value="El Karma">El Karma</option>
+                                    <option value="Mivida">Mivida</option>
+                                    <option value="EL Patio ORO">EL Patio ORO</option>
+                                    <option value="Palm hills golf views">Palm hills golf views</option>
+                                    <option value="Kattameya Residence">Kattameya Residence</option>
+                                    <option value="Al Burouj">Al Burouj</option>
+                                    <option value="Les Rois">Les Rois</option>
+                                    <option value="Tawny">Tawny</option>
+                                    <option value="Atrio">Atrio</option>
+                                    <option value="Eastown">Eastown</option>
+                                    <option value="La Vista City">La Vista City</option>
+                                    <option value="Kattameya Gardens">Kattameya Gardens</option>
+                                    <option value="2020 Compound">2020 Compound</option>
+                                    <option value="Marina City">Marina City</option>
+                                    <option value="The Crown">The Crown</option>
+                                    <option value="EL Patio Casa">EL Patio Casa</option>
+                                    <option value="Rayos">Rayos</option>
+                                    <option value="Porto October">Porto October</option>
+                                    <option value="Alma">Alma</option>
+                                    <option value="Sodic East">Sodic East</option>
+                                    <option value="Mountain View - October Park">Mountain View - October Park</option>
+                                    <option value="Zayed 2000">Zayed 2000</option>
+                                    <option value="Concord Gardens">Concord Gardens</option>
+                                    <option value="Cleopatra Palace">Cleopatra Palace</option>
+                                    <option value="Gardenia">Gardenia</option>
+                                    <option value="Dreamland">Dreamland</option>
+                                    <option value="De Joya">De Joya</option>
+                                    <option value="Palm Parks">Palm Parks</option>
+                                    <option value="Silva">Silva</option>
+                                    <option value="Mountain View 2">Mountain View 2</option>
+                                    <option value="Ourika">Ourika</option>
+                                    <option value="Aswar">Aswar</option>
+                                    <option value="Trio Gardens">Trio Gardens</option>
+                                    <option value="Grand Heights">Grand Heights</option>
+                                    <option value="Belle Vie">Belle Vie</option>
+                                    <option value="Keeva">Keeva</option>
+                                    <option value="Palm Hills New Cairo">Palm Hills New Cairo</option>
+                                    <option value="El Reef El Orouby">El Reef El Orouby</option>
+                                    <option value="Bloomfields">Bloomfields</option>
+                                    <option value="Fountain Park">Fountain Park</option>
+                                    <option value="VGK">VGK</option>
+                                    <option value="Karma Residence">Karma Residence</option>
+                                    <option value="Zayed Dunes">Zayed Dunes</option>
+                                    <option value="Pyramids Walk">Pyramids Walk</option>
+                                    <option value="Monte Napoleon">Monte Napoleon</option>
+                                    <option value="Cleopatra Square">Cleopatra Square</option>
+                                    <option value="Leena Springs">Leena Springs</option>
+                                    <option value="Bellagio">Bellagio</option>
+                                    <option value="Fifth Square">Fifth Square</option>
+                                    <option value="Golden Heights">Golden Heights</option>
+                                    <option value="Zed East">Zed East</option>
+                                    <option value="River Walk">River Walk</option>
+                                    <option value="Casa Verde">Casa Verde</option>
+                                    <option value="Moon Valley">Moon Valley</option>
+                                    <option value="La Rose">La Rose</option>
+                                    <option value="Meadows Park">Meadows Park</option>
+                                    <option value="Jeera">Jeera</option>
+                                    <option value="Palm Valley">Palm Valley</option>
+                                    <option value="Al Maqsad">Al Maqsad</option>
+                                    <option value="Green 4">Green 4</option>
+                                    <option value="Nakheel">Nakheel</option>
+                                    <option value="Bamboo Palm Hills">Bamboo Palm Hills</option>
+                                    <option value="Greens">Greens</option>
+                                    <option value="Hadaba">Hadaba</option>
+                                    <option value="The Estates">The Estates</option>
+                                    <option value="Mountain View 1">Mountain View 1</option>
+                                    <option value="The MarQ">The MarQ</option>
+                                    <option value="Not in Compound">Not in Compound</option>
+                                    <option value="Divina Gardens">Divina Gardens</option>
+                                    <option value="Creek Town">Creek Town</option>
+                                    <option value="District 5 Compound">District 5 Compound</option>
+                                    <option value="Stone Park">Stone Park</option>
+                                    <option value="Mountain View Hyde Park">Mountain View Hyde Park</option>
+                                    <option value="La Terra">La Terra</option>
+                                    <option value="Cairo Gate">Cairo Gate</option>
+                                    <option value="Rock Ville">Rock Ville</option>
+                                    <option value="Katameya Dunes">Katameya Dunes</option>
+                                    <option value="Emerald Park">Emerald Park</option>
+                                    <option value="May Fair">May Fair</option>
+                                    <option value="Lake View">Lake View</option>
+                                    <option value="Hayah Residence">Hayah Residence</option>
+                                    <option value="Fleur De Ville">Fleur De Ville</option>
+                                    <option value="IL Bosco City">IL Bosco City</option>
+                                    <option value="Zayed Regency">Zayed Regency</option>
+                                    <option value="Al Solaimaneyah Golf City">Al Solaimaneyah Golf City</option>
+                                    <option value="Woodville">Woodville</option>
+                                    <option value="Gardenia Springs">Gardenia Springs</option>
+                                    <option value="Katameya Hills">Katameya Hills</option>
+                                    <option value="Concordia">Concordia</option>
+                                    <option value="Villar Residence">Villar Residence</option>
+                                    <option value="L’Avenir">L’Avenir</option>
+                                    <option value="EL Patio 2">EL Patio 2</option>
+                                    <option value="La Verde">La Verde</option>
+                                    <option value="Green Square">Green Square</option>
+                                    <option value="Seasons">Seasons</option>
+                                    <option value="Katameya Heights">Katameya Heights</option>
+                                </select>
+
+
+
+
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="col-2">
+
+                                    <label class="label"><b>Bedrooms &nbsp; &nbsp; &nbsp;</b></label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="Bedrooms">  
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="row row-space">
+
+
+                                <div class="input-group">
+                                    <div class="col-2">
+
+                                        <label class="label"><b>Bathrooms &nbsp; &nbsp; &nbsp;</b></label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="Bathrooms">
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+
+                                    <div class="input-group">
+                                        <label class="label"><b>Delivery Date &nbsp; &nbsp; &nbsp;</b></label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="Delivery Date">
+                                        <option value="Ready to move">Ready to move</option>
+                                        <option value="soon">soon</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="within 6 months">within 6 months</option>
+                                        <option value="2022">2022</option>
+                                    </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label"><b>Area (m²)</b></label>
+                                        <input class="input--style-4" type="number" name="Area (m²)" required>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-2">
+
+                                    <div class="input-group">
+                                        <label class="label"><b>Price Per Meter</b></label>
+                                        <input class="input--style-4" type="number" name="meter_price" required>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+                            <div class="row row-space">
+
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label"><b>Payment Options ?</b></label>
+                                        <div class=" rs-select2 js-select-simple select--no-search">
+                                            <select name="Payment Option">
+                                                    <option value="Cash or Installment">Cash or Installment</option>
+                                                    <option value="Cash">Cash</option>
+                                                    <option value="Installment">Installment</option>
+    
+    
+    
+    
+    
+                                                </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label"><b>Delivery Term ?</b></label>
+                                        <div class=" rs-select2 js-select-simple select--no-search">
+                                            <select name="Delivery Term">
+                                                <option value="Core & Shell">Core & Shell</option>
+                                                <option value="Finished">Finished</option>
+                                                <option value="Semi Finished">Semi Finished</option>
+                                                <option value="Not Finished">Not Finished</option>
+
+
+
+
+
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                            <div class="input-group">
+                                <label>Amenities</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Parking" type="checkbox" id="Parking" value="1">
+                                <label class="form-check-label" for="Parking">Covered Parking</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Landline" type="checkbox" id="Landline" value="1">
+                                <label class="form-check-label" for="Landline">Landline</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="A/C" type="checkbox" id="A/C" value="1">
+                                <label class="form-check-label" for="A/C">Central A/C & heating</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Gas" type="checkbox" id="Gas" value="1">
+                                <label class="form-check-label" for="Gas">Natural Gas</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Security" type="checkbox" id="Security" value="1">
+                                <label class="form-check-label" for="Security">Security</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Water" type="checkbox" id="Water" value="1">
+                                <label class="form-check-label" for="Water">Water Meter</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Elevator" type="checkbox" id="Elevator" value="1">
+                                <label class="form-check-label" for="Elevator">Elevator</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Pool" type="checkbox" id="Pool" value="1">
+                                <label class="form-check-label" for="Pool">Pool</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Pets" type="checkbox" id="Pets" value="1">
+                                <label class="form-check-label" for="Pets">Pets Allowed</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Kitchen" type="checkbox" id="Kitchen" value="1">
+                                <label class="form-check-label" for="Kitchen">Built in Kitchen Appliances</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Maids" type="checkbox" id="Maids" value="1">
+                                <label class="form-check-label" for="Maids">Maids Room</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Electricity" type="checkbox" id="Electricity" value="1">
+                                <label class="form-check-label" for="Electricity">Electricity Meter</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Garden" type="checkbox" id="Garden" value="1">
+                                <label class="form-check-label" for="Garden">Private Garden</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="Balcony" type="checkbox" id="Balcony" value="1">
+                                <label class="form-check-label" for="1">Balcony</label>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <label>Furnished</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="Furnished">Yes</label>
+                            <input class="form-check-input" type="radio" id="html" name="Furnished" value="1" required>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label" for="Furnished">NO</label>
+                            <input class="form-check-input" type="radio" id="html" name="Furnished" value="0">
+                        </div>
+                        <div class="p-t-15" style="margin-left: 40px;">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Predict Apartement price</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="/static/vendor/select2/select2.min.js"></script>
+    <script src="/static/vendor/datepicker/moment.min.js"></script>
+    <script src="/static/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="../static/js/global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+<!-- end document-->
